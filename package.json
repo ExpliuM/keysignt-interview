@@ -1,0 +1,29 @@
+{
+  "name": "keysight-interview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "antlr:import-statment-grammer": "cd src/import-statment-grammar/ && antlr -visitor ImportStatmentGrammar.g4",
+    "antlr:program": "cd ./src/program-grammar && antlr -visitor ProgramGrammar.g4",
+    "antlr": "npm run antlr:import-statment-grammer; npm run antlr:program",
+    "start": "npm run antlr; npx tsc && node dist/index.js",
+    "test": "npx jest",
+    "test:watch": "npx jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.196",
+    "antlr4": "^4.13.0",
+    "antlr4ts": "0.5.0-alpha.4",
+    "lodash": "^4.17.21"
+  }
+}

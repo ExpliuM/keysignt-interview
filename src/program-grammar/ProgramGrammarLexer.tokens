@@ -1,0 +1,10 @@
+ImportStatment=1
+Import=2
+SemiColon=3
+Code=4
+FullPath=5
+WhiteSpace=6
+NewLine=7
+UnexpectedCharacter=8
+'import'=2
+';'=3

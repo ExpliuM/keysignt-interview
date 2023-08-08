@@ -1,0 +1,6 @@
+Import=1
+FullPath=2
+WhiteSpace=3
+NewLine=4
+UnexpectedCharacter=5
+'import'=1
