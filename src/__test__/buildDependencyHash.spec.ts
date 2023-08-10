@@ -68,7 +68,7 @@ describe("Lexer tokens", () => {
       progFileFullPath
     );
     expect(output).toBe(
-"root.prog\n\tex1.lib\n\t\tex1.lib\n\t\t\tex1.lib\n\t\t\t\tex1.lib\n\t\t\t\t\tex1.lib\n\t\t\t\t\t\tex1.lib\n\t\t\t\t\t\t\tex1.lib\n\tex2.lib\n\t\tex2.lib\n\t\t\tex2.lib\n\t\t\t\tex2.lib\n\t\t\t\t\tex2.lib\n\t\t\t\t\t\tex2.lib\n\t\t\t\t\t\t\tex2.lib\n"
+"root.prog\n\tex1.lib\n\t\tex1.lib\n\t\t\tex1.lib\n\t\t\t\tex1.lib\n\t\t\t\t\tex1.lib\n\t\t\t\t\t\tex1.lib\n\t\t\t\t\t\t\tex1.lib\n\tex2.lib\n"
     );
   });
 });

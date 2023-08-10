@@ -39,8 +39,10 @@ function getImportsRecursively(fileFullPath: string) {
 export function getImports(codeFileFull: string) {
   const pathSet = new Set<string>();
 
+  // If the imported file doesn't exists lets print warning and ignore it
   if (!fs.existsSync(codeFileFull)) {
     console.warn("Could not find " + codeFileFull + " file");
+    return pathSet
   }
 
   const codeFilePath = getFilePath(codeFileFull);

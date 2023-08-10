@@ -7,7 +7,7 @@
     "antlr:import-statement-grammer": "cd src/import-statement-grammar/ && antlr -visitor ImportStatementGrammar.g4",
     "antlr:program": "cd ./src/program-grammar && antlr -visitor ProgramGrammar.g4",
     "antlr": "npm run antlr:import-statement-grammer; npm run antlr:program",
-    "start": "npm run antlr; npx tsc && node dist/index.js ./examples/example1/root.prog",
+    "start": "npm run antlr; npx tsc && node dist/index.js ./examples/example6/root.prog",
     "test": "npx jest",
     "test:watch": "npx jest --watch"
   },
