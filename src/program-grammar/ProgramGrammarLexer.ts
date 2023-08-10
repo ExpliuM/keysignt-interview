@@ -12,7 +12,7 @@ import {
 	Token
 } from "antlr4";
 export default class ProgramGrammarLexer extends Lexer {
-	public static readonly ImportStatment = 1;
+	public static readonly ImportStatement = 1;
 	public static readonly Import = 2;
 	public static readonly SemiColon = 3;
 	public static readonly Code = 4;
@@ -26,7 +26,7 @@ export default class ProgramGrammarLexer extends Lexer {
 	public static readonly literalNames: (string | null)[] = [ null, null, 
                                                             "'import'", 
                                                             "';'" ];
-	public static readonly symbolicNames: (string | null)[] = [ null, "ImportStatment", 
+	public static readonly symbolicNames: (string | null)[] = [ null, "ImportStatement", 
                                                              "Import", "SemiColon", 
                                                              "Code", "FullPath", 
                                                              "WhiteSpace", 
@@ -35,8 +35,8 @@ export default class ProgramGrammarLexer extends Lexer {
 	public static readonly modeNames: string[] = [ "DEFAULT_MODE", ];
 
 	public static readonly ruleNames: string[] = [
-		"ImportStatment", "Import", "SemiColon", "Code", "FullPath", "Path", "FileName", 
-		"FileExt", "FileSep", "DirSep", "DirName", "ParentDir", "CurrentDir", 
+		"ImportStatement", "Import", "SemiColon", "Code", "FullPath", "Path", 
+		"FileName", "FileExt", "FileSep", "DirSep", "DirName", "ParentDir", "CurrentDir", 
 		"Underscore", "Digits", "Letters", "WhiteSpace", "NewLine", "UnexpectedCharacter",
 	];
 

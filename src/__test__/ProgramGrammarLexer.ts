@@ -133,8 +133,8 @@ describe("Lexer tokens", () => {
     {
       let { line, start, stop, text, type } = tokens[0];
 
-      expect(lexer.symbolicNames[type]).toBe("ImportStatment");
-      expect(type).toBe(getTypeIndex("ImportStatment", lexer));
+      expect(lexer.symbolicNames[type]).toBe("ImportStatement");
+      expect(type).toBe(getTypeIndex("ImportStatement", lexer));
       expect(text).toBe("import ./file.lib;");
       expect(line).toBe(1);
       expect(start).toBe(0);
@@ -190,8 +190,8 @@ describe("Lexer tokens", () => {
     {
       let { line, start, stop, text, type } = tokens[0];
 
-      expect(lexer.symbolicNames[type]).toBe("ImportStatment");
-      expect(type).toBe(getTypeIndex("ImportStatment", lexer));
+      expect(lexer.symbolicNames[type]).toBe("ImportStatement");
+      expect(type).toBe(getTypeIndex("ImportStatement", lexer));
       expect(text).toBe("import ./file.lib;");
       expect(line).toBe(1);
       expect(start).toBe(0);
@@ -210,8 +210,8 @@ describe("Lexer tokens", () => {
     {
       let { line, start, stop, text, type } = tokens[2];
 
-      expect(lexer.symbolicNames[type]).toBe("ImportStatment");
-      expect(type).toBe(getTypeIndex("ImportStatment", lexer));
+      expect(lexer.symbolicNames[type]).toBe("ImportStatement");
+      expect(type).toBe(getTypeIndex("ImportStatement", lexer));
       expect(text).toBe("import ./file.lib;");
       expect(line).toBe(2);
       expect(start).toBe(19);
@@ -229,8 +229,8 @@ describe("Lexer tokens", () => {
     {
       let { line, start, stop, text, type } = tokens[0];
 
-      expect(lexer.symbolicNames[type]).toBe("ImportStatment");
-      expect(type).toBe(getTypeIndex("ImportStatment", lexer));
+      expect(lexer.symbolicNames[type]).toBe("ImportStatement");
+      expect(type).toBe(getTypeIndex("ImportStatement", lexer));
       expect(text).toBe("import ./file.lib;");
       expect(line).toBe(1);
       expect(start).toBe(0);
@@ -239,8 +239,8 @@ describe("Lexer tokens", () => {
     {
       let { line, start, stop, text, type } = tokens[1];
 
-      expect(lexer.symbolicNames[type]).toBe("ImportStatment");
-      expect(type).toBe(getTypeIndex("ImportStatment", lexer));
+      expect(lexer.symbolicNames[type]).toBe("ImportStatement");
+      expect(type).toBe(getTypeIndex("ImportStatement", lexer));
       expect(text).toBe("import ./file.lib;");
       expect(line).toBe(1);
       expect(start).toBe(18);

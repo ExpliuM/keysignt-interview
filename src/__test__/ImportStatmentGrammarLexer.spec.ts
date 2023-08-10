@@ -1,10 +1,10 @@
 import { forEach } from "lodash";
-import { getNewImportStatmentLexer, getTypeIndex } from "../GrammerHelpers";
+import { getNewImportStatementLexer, getTypeIndex } from "../GrammerHelpers";
 
 describe("Lexer tokens", () => {
   test('tokens for ""', () => {
     const input = "";
-    const lexer = getNewImportStatmentLexer(input);
+    const lexer = getNewImportStatementLexer(input);
     const tokens = lexer.getAllTokens();
 
     expect(tokens.length).toBe(0);
@@ -28,7 +28,7 @@ describe("Lexer tokens", () => {
 
     paths.forEach((path) => {
       const input = "import " + path;
-      const lexer = getNewImportStatmentLexer(input);
+      const lexer = getNewImportStatementLexer(input);
       const tokens = lexer.getAllTokens();
 
       expect(tokens.length).toBe(3);
@@ -54,7 +54,7 @@ describe("Lexer tokens", () => {
 
     paths.forEach((path) => {
       const input = "import " + path;
-      const lexer = getNewImportStatmentLexer(input);
+      const lexer = getNewImportStatementLexer(input);
       const tokens = lexer.getAllTokens();
 
       expect(tokens.length).toBe(4);
@@ -77,7 +77,7 @@ describe("Lexer tokens", () => {
 
     paths.forEach((path) => {
       const input = "import " + path;
-      const lexer = getNewImportStatmentLexer(input);
+      const lexer = getNewImportStatementLexer(input);
       const tokens = lexer.getAllTokens();
 
       expect(tokens.length).toBe(4);

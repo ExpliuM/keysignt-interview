@@ -11,7 +11,7 @@ null
 
 token symbolic names:
 null
-ImportStatment
+ImportStatement
 Import
 SemiColon
 Code
@@ -21,7 +21,7 @@ NewLine
 UnexpectedCharacter
 
 rule names:
-ImportStatment
+ImportStatement
 Import
 SemiColon
 Code

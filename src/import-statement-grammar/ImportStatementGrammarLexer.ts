@@ -1,4 +1,4 @@
-// Generated from ImportStatmentGrammar.g4 by ANTLR 4.13.0
+// Generated from ImportStatementGrammar.g4 by ANTLR 4.13.0
 // noinspection ES6UnusedImports,JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 import {
 	ATN,
@@ -11,7 +11,7 @@ import {
 	PredictionContextCache,
 	Token
 } from "antlr4";
-export default class ImportStatmentGrammarLexer extends Lexer {
+export default class ImportStatementGrammarLexer extends Lexer {
 	public static readonly Import = 1;
 	public static readonly FullPath = 2;
 	public static readonly WhiteSpace = 3;
@@ -37,20 +37,20 @@ export default class ImportStatmentGrammarLexer extends Lexer {
 
 	constructor(input: CharStream) {
 		super(input);
-		this._interp = new LexerATNSimulator(this, ImportStatmentGrammarLexer._ATN, ImportStatmentGrammarLexer.DecisionsToDFA, new PredictionContextCache());
+		this._interp = new LexerATNSimulator(this, ImportStatementGrammarLexer._ATN, ImportStatementGrammarLexer.DecisionsToDFA, new PredictionContextCache());
 	}
 
-	public get grammarFileName(): string { return "ImportStatmentGrammar.g4"; }
+	public get grammarFileName(): string { return "ImportStatementGrammar.g4"; }
 
-	public get literalNames(): (string | null)[] { return ImportStatmentGrammarLexer.literalNames; }
-	public get symbolicNames(): (string | null)[] { return ImportStatmentGrammarLexer.symbolicNames; }
-	public get ruleNames(): string[] { return ImportStatmentGrammarLexer.ruleNames; }
+	public get literalNames(): (string | null)[] { return ImportStatementGrammarLexer.literalNames; }
+	public get symbolicNames(): (string | null)[] { return ImportStatementGrammarLexer.symbolicNames; }
+	public get ruleNames(): string[] { return ImportStatementGrammarLexer.ruleNames; }
 
-	public get serializedATN(): number[] { return ImportStatmentGrammarLexer._serializedATN; }
+	public get serializedATN(): number[] { return ImportStatementGrammarLexer._serializedATN; }
 
-	public get channelNames(): string[] { return ImportStatmentGrammarLexer.channelNames; }
+	public get channelNames(): string[] { return ImportStatementGrammarLexer.channelNames; }
 
-	public get modeNames(): string[] { return ImportStatmentGrammarLexer.modeNames; }
+	public get modeNames(): string[] { return ImportStatementGrammarLexer.modeNames; }
 
 	public static readonly _serializedATN: number[] = [4,0,5,118,6,-1,2,0,7,
 	0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,
@@ -92,13 +92,13 @@ export default class ImportStatmentGrammarLexer extends Lexer {
 
 	private static __ATN: ATN;
 	public static get _ATN(): ATN {
-		if (!ImportStatmentGrammarLexer.__ATN) {
-			ImportStatmentGrammarLexer.__ATN = new ATNDeserializer().deserialize(ImportStatmentGrammarLexer._serializedATN);
+		if (!ImportStatementGrammarLexer.__ATN) {
+			ImportStatementGrammarLexer.__ATN = new ATNDeserializer().deserialize(ImportStatementGrammarLexer._serializedATN);
 		}
 
-		return ImportStatmentGrammarLexer.__ATN;
+		return ImportStatementGrammarLexer.__ATN;
 	}
 
 
-	static DecisionsToDFA = ImportStatmentGrammarLexer._ATN.decisionToState.map( (ds: DecisionState, index: number) => new DFA(ds, index) );
+	static DecisionsToDFA = ImportStatementGrammarLexer._ATN.decisionToState.map( (ds: DecisionState, index: number) => new DFA(ds, index) );
 }

@@ -4,7 +4,7 @@ options {
     language=TypeScript;
 }
 
-ImportStatment
+ImportStatement
     : Import (WhiteSpace | NewLine)+ FullPath SemiColon
     ;
 

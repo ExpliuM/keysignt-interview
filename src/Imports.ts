@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 
-import { getNewImportStatmentLexer, getNewLexer } from "./GrammerHelpers";
+import { getNewImportStatementLexer, getNewLexer } from "./GrammerHelpers";
 import { getFilePath } from "./fileHelpers";
 
 function getImportsRecursively(fileFullPath: string) {
@@ -33,11 +33,16 @@ function getImportsRecursively(fileFullPath: string) {
 
   getImportsRecursivelyAux();
 
-  // printHash(importsHash, resolvedCodeFilePath, 0);
   return discoveredImports;
 }
 
 export function getImports(codeFileFull: string) {
+  const pathSet = new Set<string>();
+
+  if (!fs.existsSync(codeFileFull)) {
+    console.warn("Could not find " + codeFileFull + " file");
+  }
+
   const codeFilePath = getFilePath(codeFileFull);
 
   const input = fs.readFileSync(codeFileFull, "utf-8");
@@ -45,23 +50,22 @@ export function getImports(codeFileFull: string) {
   const lexer = getNewLexer(input);
   const tokens = lexer.getAllTokens();
 
-  const ImportStatmentTokens = tokens.filter(
-    (token) => lexer.symbolicNames[token.type] === "ImportStatment"
+  const ImportStatementTokens = tokens.filter(
+    (token) => lexer.symbolicNames[token.type] === "ImportStatement"
   );
 
-  const pathSet = new Set<string>();
-  ImportStatmentTokens.forEach(
-    (importStatmentToken, ImportStatmentTokenIndex) => {
-      const lexer = getNewImportStatmentLexer(importStatmentToken.text);
+  ImportStatementTokens.forEach(
+    (importStatementToken, ImportStatementTokenIndex) => {
+      const lexer = getNewImportStatementLexer(importStatementToken.text);
       const tokens = lexer.getAllTokens();
 
-      const importStatmentPathsTokens = tokens.filter(
+      const importStatementPathsTokens = tokens.filter(
         (token) => lexer.symbolicNames[token.type] === "FullPath"
       );
 
-      importStatmentPathsTokens.forEach((importStatmentPathsToken) => {
+      importStatementPathsTokens.forEach((importStatementPathsToken) => {
         pathSet.add(
-          path.resolve(codeFilePath + "/" + importStatmentPathsToken.text)
+          path.resolve(codeFilePath + "/" + importStatementPathsToken.text)
         );
       });
     }

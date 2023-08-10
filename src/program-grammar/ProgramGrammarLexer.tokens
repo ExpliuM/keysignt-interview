@@ -1,4 +1,4 @@
-ImportStatment=1
+ImportStatement=1
 Import=2
 SemiColon=3
 Code=4

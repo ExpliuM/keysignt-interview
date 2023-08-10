@@ -4,10 +4,10 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "antlr:import-statment-grammer": "cd src/import-statment-grammar/ && antlr -visitor ImportStatmentGrammar.g4",
+    "antlr:import-statement-grammer": "cd src/import-statement-grammar/ && antlr -visitor ImportStatementGrammar.g4",
     "antlr:program": "cd ./src/program-grammar && antlr -visitor ProgramGrammar.g4",
-    "antlr": "npm run antlr:import-statment-grammer; npm run antlr:program",
-    "start": "npm run antlr; npx tsc && node dist/index.js",
+    "antlr": "npm run antlr:import-statement-grammer; npm run antlr:program",
+    "start": "npm run antlr; npx tsc && node dist/index.js ./examples/example1/root.prog",
     "test": "npx jest",
     "test:watch": "npx jest --watch"
   },

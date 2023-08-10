@@ -1,4 +1,4 @@
-grammar ImportStatmentGrammar;
+grammar ImportStatementGrammar;
 
 options {
     language=TypeScript;

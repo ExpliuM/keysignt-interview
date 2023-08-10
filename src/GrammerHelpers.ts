@@ -1,12 +1,12 @@
 import { CharStream, CommonTokenStream } from "antlr4";
 
-import ImportStatmentLexer from "./import-statment-grammar/ImportStatmentGrammarLexer";
+import ImportStatementLexer from "./import-statement-grammar/ImportStatementGrammarLexer";
 import ProgramGrammarLexer from "./program-grammar/ProgramGrammarLexer";
 // import Parser from "./program-grammar/GrammarParser";
 
-export function getNewImportStatmentLexer(input: string): ProgramGrammarLexer {
+export function getNewImportStatementLexer(input: string): ProgramGrammarLexer {
   const chars = new CharStream(input);
-  return new ImportStatmentLexer(chars);
+  return new ImportStatementLexer(chars);
 }
 
 export function getNewLexer(input: string): ProgramGrammarLexer {
@@ -19,4 +19,4 @@ export function getTypeIndex(type: String, lexer: ProgramGrammarLexer): Number {
   return array.findIndex((elem) => elem === type);
 }
 
-export default { getNewImportStatmentLexer, getNewLexer, getTypeIndex };
+export default { getNewImportStatementLexer, getNewLexer, getTypeIndex };

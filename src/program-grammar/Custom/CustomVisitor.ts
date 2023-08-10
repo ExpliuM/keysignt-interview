@@ -1,7 +1,7 @@
 // import { ErrorNode, RuleNode, TerminalNode } from "antlr4";
 
 // import _ = require("lodash");
-// import { getNewImportStatmentLexer } from "./../../GrammerHelpers";
+// import { getNewImportStatementLexer } from "./../../GrammerHelpers";
 // import { ProgramContext } from "./../GrammarParser";
 // import GrammarVisitor from "./../GrammarVisitor";
 
@@ -25,18 +25,18 @@
 
 //     console.log("visitProgram");
 
-//     // console.log("visitProgram","Statment_list.length", programContext.Statment_list.length);
+//     // console.log("visitProgram","Statement_list.length", programContext.Statement_list.length);
 //     // console.log("visitProgram","Code.length", programContext.);
 //     // console.log("visitProgram", programContext.WhiteSpace_list.length);
 //     // console.log("visitProgram", programContext.getText());
 //     // console.log("visitProgram", programContext.Code_list.length);
-//     // console.log("visitProgram", programContext.ImportStatment_list.length);
-//     // console.log("visitProgram", programContext.ImportStatment_list.length);
+//     // console.log("visitProgram", programContext.ImportStatement_list.length);
+//     // console.log("visitProgram", programContext.ImportStatement_list.length);
     
 //     // _.forEach(
-//     //   programContext.ImportStatment_list,
-//     //   (ImportStatment: TerminalNode) => {
-//     //     const Statement = this.visitImportStatment(ImportStatment);
+//     //   programContext.ImportStatement_list,
+//     //   (ImportStatement: TerminalNode) => {
+//     //     const Statement = this.visitImportStatement(ImportStatement);
 //     //     return Statement;
 //     //   }
 //     // );
@@ -44,11 +44,11 @@
 //     return "";
 //   }
 
-//   visitImportStatment(terminalNode: TerminalNode): string {
+//   visitImportStatement(terminalNode: TerminalNode): string {
 //     const importStatement = terminalNode.getText();
 //     console.log("importStatement", importStatement);
 
-//     const lexer = getNewImportStatmentLexer(importStatement);
+//     const lexer = getNewImportStatementLexer(importStatement);
 //     const tokens = lexer.getAllTokens();
 //     console.log("tokens[0].text", tokens[2].text);
 //     console.log("tokens[0] symbolicNames", lexer.symbolicNames[tokens[2].type]);

@@ -20,18 +20,18 @@
 //   }
 
 //   visitProgram(programContext: ProgramContext): string {
-//     console.log("visitProgram",programContext.Statment_list.length);
-//     if (programContext.Statment_list.length > 0) {
+//     console.log("visitProgram",programContext.Statement_list.length);
+//     if (programContext.Statement_list.length > 0) {
       
-//       // console.log("visitProgram", "ImportStatment");
-//       // const Statement = this.visitTerminal(programContext.ImportStatment(0));
+//       // console.log("visitProgram", "ImportStatement");
+//       // const Statement = this.visitTerminal(programContext.ImportStatement(0));
 //       // return Statement;
 //     }
 
 //     return "";
 //   }
 
-//   visitImportStatment(terminalNode: TerminalNode): string {
+//   visitImportStatement(terminalNode: TerminalNode): string {
 //     const importStatement = terminalNode.getText();
 
 //     console.log(
